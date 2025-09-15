@@ -196,3 +196,14 @@ img {
     mask-border: var(--_m);
     clip-path: polygon(-41% 0, 50% 91%, 141% 0);
 }
+
+html, body { height: 100%; }
+
+body {
+  background: url('././z7015844178616_80eb970a5ec99c0c2781cc07aedc481e.jpg') center/cover no-repeat fixed !important;
+}
+
+.container2,
+.content {
+  background: transparent !important;
+}
