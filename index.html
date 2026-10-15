@@ -140,21 +140,48 @@ retryButton.addEventListener("click", async () => {
         cache: "no-store"
       }
     );
-
-    statusMessage.textContent = "Bbi, u make me upset";
-  } catch {
-    statusMessage.textContent = "Bbi, u make me upset";
+    
+  } catch (error){
+    
   }
+
+  if (clickCount === 1) {
+      statusMessage.textContent = "Bbi, u make me upset";
+    } else if (clickCount === 2) {
+      statusMessage.textContent = "U wanna do it again? Sure, Why not? Click here one more time";
+    }
 
   retryButton.disabled = false;
   retryLabel.textContent = "Try again";
 });
 
 
+let backClickCount = 0;
+
 backButton.addEventListener("click", () => {
-  statusMessage.textContent =
-    "You wanna go back? How? No future for us. My girl has someone else =))) After all, I just wanna kill her.";
+  backClickCount++;
+
+  if (backClickCount === 1) {
+    statusMessage.textContent =
+      "You wanna go back? How? No future for us. My girl has someone else =))) After all, I just wanna kill her.";
+  } else if (backClickCount === 2) {
+    statusMessage.textContent =
+      "But… no matter what happens, I promised myself I’d love only one person for the rest of my life.";
+  } else if (backClickCount === 3) {
+    statusMessage.textContent =
+      "If one day you miss me and find your way here, just know that you are the one I’ve been wanting to say all these things to.";
+  } else if (backClickCount === 4) {
+    statusMessage.textContent =
+      "I miss you so much, but I resent you just as much.";
+  } else if (backClickCount === 5){
+    statusMessage.textContent =
+      "Some promises stay, even after someone has left.";
+  } else {
+    statusMessage.textContent =
+      "N";
+  }
 });
+
 
 </script>
 
